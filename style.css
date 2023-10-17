@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --header--color:#f7f7f7d7;;
+    --logo--color:#110b27fd;
+    --label--color:#030207e8;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+ 
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    background-color: var(--header--color);
+    padding: 1rem;
+    border-bottom: solid 1px black;
+    box-shadow: 5px 5px 30px;
+   
+}
+
+.logo{
+    display: flex;
+    font-size: 0.8rem;     
+}
+
+.logo a{
+    color: var(--logo--color);
+}
+
+.box_menu{
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: end;
+    
+    
+}
+.input_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.box_menu label{
+    color: var(--label--color);
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+
+.box_menu input{
+    padding: 0.1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    
+}
+
+.box_menu .name_input{
+    
+    border-radius: 4px;
+    font-family: 'Bebas Neue', sans-serif;
+    
+    
+}
+
+.box_menu .date_input{
+    border-radius: 4px;
+    
+    max-width: 30%;
+    margin: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.research{
+    margin: 0.3rem;
+    border-radius: 8px;
+    padding: 0.3rem;
+    
+    
+}
+.research a{
+    color: black;
+
+}
+
+.box_input_date{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    
+
+}
+.box_input_date > input{
+    width: 5rem;
+    
+}
+
+@media screen and (max-width: 730px){
+    header{
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        margin: 0;
+    }
+    .box_menu{
+        display: flex;
+        justify-content: start;
+    }
+}
+@media screen and (max-width: 426px){
+    .input_box{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+          
+    }
+    
+    .box_menu{
+        width: 100%;
+        
+    }
+   
+    
+}
+main{
+    
+    text-align: center;
+    padding: 2rem;
+    flex-grow: 1;
+}
+main h2{
+    font-family:'Bebas Neue', sans-serif;
+}
+
+
+
