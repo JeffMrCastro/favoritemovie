@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite Movies</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
 </head>
@@ -25,7 +26,7 @@
                 <div class="box_input_date">
                     <label for="date_input">Ano</label>
                     <input class="date_input" id="date_input" type="text">
-                    <button class="research"><a href="#"><i class="bi bi-search"></i></a></button>
+                    <button id="research"><i class="bi bi-search"></i></button>
                 </div>
             </div>
         </div>
@@ -34,14 +35,36 @@
     <main>
         <h2>Coloque seu filme favorito aqui.</h2>
         <section id="list_movies"></section>
-        <article id="modal_overlay">
+        <article id="modal_overlay" class="overlay">
             <section id="modal_background"></section>
             <section id="modal_container">
-                <h2></h2>
+                <h2 id="movie_title">Tears of the Sun - 2003</h2>
+                <section id="modal_body">
+                    <img id="movie_poster" src="https://m.media-amazon.com/images/M/MV5BMmI3YjQ4NjctZTk0Zi00ZDFhLTgyZjAtYWRjZTJjMjMwNjM2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="Poster do filme">
+                    <div id="movie_info">
+                        
+                        <div id="movie_plot">
+                            <h3>Resumo</h3>
+                            <h4>A Special-Ops commander leads his team into the Nigerian jungle in order to rescue a doctor who will only join them if they agree to save 70 refugees too.</h3>
+
+                        </div>
+                        <div id="movie_cast">
+                            <h4>Elenco</h4>
+                            <h5>Bruce Willis, Cole Hauser, Monica Bellucci</h5>
+                        </div>
+                        <div id="movie_genere">
+                            <h4>Genero</h4>
+                            <h5>Action, Drama, Thriller</h5>
+                        </div>    
+                    </div>
+                </section>
+                <section id="modal_footer">
+                    <button id="add_to_list">Adicionar a lista</button>
+                </section>
             </section>
         </article>
     <main>
-
-    
+<script src="/script.js"></script>
+<script src="/modal.js"></script>   
 </body>
 </html>
