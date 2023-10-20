@@ -1,161 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-:root{
-    --header--color:#ffffffd7;;
-    --logo--color:#110b27fd;
-    --label--color:#030207e8;
-    --back--main: #ebe7e7;
-
-}
-
-*{
-    padding: 0;
-    margin: 0;
- 
-    text-decoration: none;
-    list-style: none;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-}
-
-header{
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    width: 100%;
-    background-color: var(--header--color);
-    padding: 1rem  0;
-    border-bottom: solid 1px black;
-    box-shadow: 2px 2px 15px;
-   
-}
-
-.logo{
-    display: flex;
-    font-size: 0.8rem;
-    padding: 0 0.8rem;    
-}
-
-.logo a{
-    color: var(--logo--color);
-}
-
-
-
-.box_menu{
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    
-    
-    
-}
-.input_box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+</head>
+<body>
 
-}
+    <header>
 
-.box_menu label{
-    color: var(--label--color);
-    font-family: 'Bebas Neue', sans-serif;
-
-}
-
-.box_menu input{
-    padding: 0.1rem 0;
-    font-family: 'Bebas Neue', sans-serif;
-    
-}
-
-.box_menu .name_input{
-    
-    border-radius: 4px;
-    font-family: 'Bebas Neue', sans-serif;
-    
-    
-}
-
-.box_menu .date_input{
-    border-radius: 4px;
-    max-width: 30%;
-    margin: 5px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-#research{
-    margin: 0.3rem;
-    border-radius: 8px;
-    padding: 0.3rem ;
-    
-    
-}
-#research a{
-    color: black;
-
-}
-
-.box_input_date{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Bebas Neue', sans-serif;
-    
-
-}
-.box_input_date > input{
-    width: 5rem;
-    
-}
-button{
-    all: unset;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 570px){
-    header{
-        align-items: start;
-        display: flex;
-        flex-direction: column;
-    }
-    .logo{
-        margin: 0;
-    }
-    .box_menu{
-        width: 100%;
-        display: flex;
-        justify-content: start;
+        <div class="logo">
+            <a href="/"><h1><i class="bi bi-star-fill"></i>FavoriteMovies</h1></a>
+        </div>    
         
-    }
-    .input_box{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: nowrap;
-    }
-}
-    
-main{
-    text-align: center;
-    padding: 2rem 0 ;
-    flex-grow: 1;
-    background-color: var(--back--main);
-    
-    
-}
-main h2{
-    font-family:'Bebas Neue', sans-serif;
-}
+        <div class="box_menu">
+            <div class="input_box">
+                <div class="box_input_name">
+                    <label for="name_input">Nome</label>
+                    <input class="name_input" id="name_input" type="text">
+                </div>
+                <div class="box_input_date">
+                    <label for="date_input">Ano</label>
+                    <input class="date_input" id="date_input" type="text">
+                    <button id="research"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <h2>Coloque seu filme favorito aqui.</h2>
+        <section id="list_movies"></section>
+        <article id="modal_overlay" class="overlay">
+            <section id="modal_background"></section>
+            <section id="modal_container">
+                <h2 id="movie_title">Tears of the Sun - 2003</h2>
+                <section id="modal_body">
+                    <img id="movie_poster" src="https://m.media-amazon.com/images/M/MV5BMmI3YjQ4NjctZTk0Zi00ZDFhLTgyZjAtYWRjZTJjMjMwNjM2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="Poster do filme">
+                    <div id="movie_info">
+                        
+                        <div id="movie_plot">
+                            <h3>Resumo</h3>
+                            <h4>A Special-Ops commander leads his team into the Nigerian jungle in order to rescue a doctor who will only join them if they agree to save 70 refugees too.</h3>
 
-
+                        </div>
+                        <div id="movie_cast">
+                            <h4>Elenco</h4>
+                            <h5>Bruce Willis, Cole Hauser, Monica Bellucci</h5>
+                        </div>
+                        <div id="movie_genere">
+                            <h4>Genero</h4>
+                            <h5>Action, Drama, Thriller</h5>
+                        </div>    
+                    </div>
+                </section>
+                <section id="modal_footer">
+                    <button id="add_to_list">Adicionar a lista</button>
+                </section>
+            </section>
+        </article>
+    <main>
+<script src="/script.js"></script>
+<script src="/modal.js"></script>   
+</body>
+</html>
