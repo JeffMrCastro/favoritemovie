@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root{
-    --header--color:#f7f7f7d7;;
+    --header--color:#ffffffd7;;
     --logo--color:#110b27fd;
     --label--color:#030207e8;
+    --back--main: #ebe7e7;
 
 }
 
@@ -13,29 +14,29 @@
     text-decoration: none;
     list-style: none;
 }
-body{
-    display: flex;
-    flex-direction: column;
-
-}
 
 header{
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    
     width: 100%;
     background-color: var(--header--color);
-    padding: 1rem;
+    padding: 1rem  0;
     border-bottom: solid 1px black;
     box-shadow: 5px 5px 30px;
    
 }
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
 
 .logo{
     display: flex;
-    font-size: 0.8rem;     
+    font-size: 0.8rem;
+    padding: 0 0.8rem;    
 }
 
 .logo a{
@@ -47,7 +48,7 @@ header{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: end;
+    
     
     
 }
@@ -66,7 +67,7 @@ header{
 }
 
 .box_menu input{
-    padding: 0.1rem;
+    padding: 0.1rem 0;
     font-family: 'Bebas Neue', sans-serif;
     
 }
@@ -81,20 +82,19 @@ header{
 
 .box_menu .date_input{
     border-radius: 4px;
-    
     max-width: 30%;
     margin: 5px;
     font-family: 'Bebas Neue', sans-serif;
 }
 
-.research{
+#research{
     margin: 0.3rem;
     border-radius: 8px;
-    padding: 0.3rem;
+    padding: 0.3rem ;
     
     
 }
-.research a{
+#research a{
     color: black;
 
 }
@@ -112,8 +112,12 @@ header{
     width: 5rem;
     
 }
+button{
+    all: unset;
+    cursor: pointer;
+}
 
-@media screen and (max-width: 730px){
+@media screen and (max-width: 570px){
     header{
         align-items: start;
         display: flex;
@@ -123,30 +127,28 @@ header{
         margin: 0;
     }
     .box_menu{
+        width: 100%;
         display: flex;
         justify-content: start;
-    }
-}
-@media screen and (max-width: 426px){
-    .input_box{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-          
-    }
-    
-    .box_menu{
-        width: 100%;
         
     }
+    .input_box{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+}
+    
+main{
+    text-align: center;
+    padding: 2rem 0 ;
+    flex-grow: 1;
+    background-color: var(--back--main);
    
     
-}
-main{
-    
-    text-align: center;
-    padding: 2rem;
-    flex-grow: 1;
 }
 main h2{
     font-family:'Bebas Neue', sans-serif;
